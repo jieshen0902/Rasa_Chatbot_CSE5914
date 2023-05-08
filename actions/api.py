@@ -6,9 +6,9 @@ from requests import post, get
 
 
 
-# Set-up the client id and client secret
-client_id = "f3e1f1f9e39c4cb693c29c71bb6e3bb5"
-client_secret = "5e796b30ebaa4827913db426054b5b90"
+# Set-up the client id and client secret USE YOUR OWN SPOTIFY USERNAME AND PASSWORD
+client_id = ""
+client_secret = ""
 
 
 ##################      Set-up token       ##################
