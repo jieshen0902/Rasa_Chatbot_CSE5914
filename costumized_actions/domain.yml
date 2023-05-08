@@ -1,0 +1,170 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - music
+  - songs
+  - songs1
+  - songs2
+  - songs3
+  - songs4
+  - singers
+  - singers1
+  - singers2
+  - singers3
+  - albums
+  - albums1
+  - albums2
+
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_music:
+  - text: "I can recommend songs or singers for you."
+
+  utter_songs:
+  - text: "here is the song"
+
+  utter_songs1:
+  - text: "Here is a {song_type} song \nName: {Song_by_singer} Singer: {Singer_by_singer}"
+
+  utter_songs2:
+  - text: "Here is the song {Song_by_singer} that is similar to {song_name}"
+
+  utter_songs3:
+  - text: "Here are songs {Song_by_singer} of {singer_name}"
+
+  #error
+  utter_songs4:
+  - text: "Here are songs from the album{album_name}\nXXX"
+
+  utter_singers:
+  - text: "Here is the singer XXX"
+
+  #error
+  utter_singers1:
+  - text: "Here are singers who singes {song_name}\n{Singer_by_song}"
+
+  utter_singers2:
+  - text: "Here is the singer {Singer_by_singer} who is similar to {singer_name}"
+
+  utter_singers3:
+  - text: "Here is the singer XXX who produces {album_name}"
+
+  utter_albums:
+  - text: "Here is the album {album_name}"
+
+  #error
+  utter_albums1:
+  - text: "Here is the album {song_name} belongs to\nXXX"
+
+  utter_albums2:
+  - text: "Here are some albums produced by {singer_name}\n{Album_by_singer}"
+
+
+
+entities:
+- song_type
+- song_name
+- singer_name
+- album_name
+
+slots:
+  song_type:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: song_type
+  
+  song_name:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: song_name
+  
+  singer_name:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: singer_name
+  
+  album_name:
+    type: text
+    mappings: 
+    - type: from_entity
+      entity: album_name
+
+  Singer_by_singer:
+    type: text
+    mappings:
+    - type: custom
+      action: action_get_singer_name_by_singer
+  
+  #Singer_by_song:
+  #  type: text
+  #  mappings:
+  #  - type: custom
+  #    action: action_get_singer_name_by_song
+
+  Song_by_singer:
+    type: text
+    mappings:
+    - type: custom
+      action: action_get_song_name_by_singer
+
+  #Song_by_album:
+  #  type: text
+  #  mappings:
+  #  - type: custom
+  #    action: action_get_song_name_by_album
+
+  #Album_by_song:
+  #  type: text
+  #  mappings:
+  #  - type: custom
+  #    action: action_get_album_name_by_song
+
+  Album_by_singer:
+    type: text
+    mappings:
+    - type: custom
+      action: action_get_album_name_by_singer
+
+
+actions:
+- action_get_singer_name_by_singer
+#- action_get_singer_name_by_song
+- action_get_song_name_by_singer
+#- action_get_song_name_by_album
+- action_get_album_name_by_singer
+#- action_get_album_name_by_song
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false

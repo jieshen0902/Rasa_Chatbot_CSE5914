@@ -1,0 +1,118 @@
+version: "3.1"
+
+stories:
+
+- story: naughty_string path
+  steps:
+  - intent: naughty_string
+  - action: utter_naughty_string
+
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: music path
+  steps:
+  - intent: music
+  - action: utter_music
+
+- story: songs path
+  steps:
+  - intent: songs
+  - action: utter_songs
+
+- story: songs1 path
+  steps:
+  - intent: songs1
+  - action: utter_songs1
+
+- story: songs2 path
+  steps:
+  - intent: songs2
+  - action: utter_songs2
+
+- story: songs3 path
+  steps:
+  - intent: songs3
+  - action: utter_songs3
+
+- story: songs4 path
+  steps:
+  - intent: songs4
+  - action: utter_songs4
+
+- story: songs5 path
+  steps:
+  - intent: songs5
+  - action: utter_songs5
+
+- story: songs6 path
+  steps:
+  - intent: songs6
+  - action: utter_songs6
+
+- story: singers path
+  steps:
+  - intent: singers
+  - action: utter_singers
+
+- story: singers1 path
+  steps:
+  - intent: singers1
+  - action: utter_singers1
+
+- story: singers2 path
+  steps:
+  - intent: singers2
+  - action: utter_singers2
+
+- story: singers3 path
+  steps:
+  - intent: singers3
+  - action: utter_singers3
+
+- story: album path
+  steps:
+  - intent: albums
+  - action: utter_albums
+
+- story: album1 path
+  steps:
+  - intent: albums1
+  - action: utter_albums1
+
+- story: album2 path
+  steps:
+  - intent: albums2
+  - action: utter_albums2
+
+- story: albums_date path
+  steps:
+  - intent: albums_date
+  - action: utter_albums_date

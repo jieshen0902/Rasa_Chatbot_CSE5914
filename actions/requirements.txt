@@ -1,0 +1,4 @@
+# Add python dependencies here.
+python-dotenv
+requests
+spotipy

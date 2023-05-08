@@ -1,0 +1,22 @@
+images:
+  default:
+    botfront: 'botfront/botfront:v1.0.5'
+    rasa: 'botfront/rasa-for-botfront:v2.3.3-bf.3'
+    duckling: 'botfront/duckling:latest'
+    mongo: 'mongo:latest'
+    actions: 'rasa/rasa-sdk:2.1.2'
+  current:
+    botfront: 'botfront/botfront:v1.0.5'
+    rasa: 'botfront/rasa-for-botfront:v2.3.3-bf.3'
+    duckling: 'botfront/duckling:latest'
+    mongo: 'mongo:latest'
+    actions: 'rasa/rasa-sdk:2.1.2'
+env:
+  bf_project_id: ym2WqtN8FbwYmdenP
+  bf_url: 'http://botfront:3000/graphql'
+  root_url: 'http://localhost:8888'
+  augmentation_factor: 50
+  mongo_url: 'mongodb://mongo:27017/bf'
+  CLIENT_ID: '"f3e1f1f9e39c4cb693c29c71bb6e3bb5"'
+  CLIENT_SECRET: '"5e796b30ebaa4827913db426054b5b90"'
+version: 1.0.5

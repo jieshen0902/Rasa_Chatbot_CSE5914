@@ -1,0 +1,336 @@
+version: "3.1"
+
+nlu:
+- regex: song_name
+  examples: |
+    - .+
+
+- regex: song_type
+  examples: |
+    - .+
+
+- regex: singer_name
+  examples: |
+    - .+
+
+- regex: album_name
+  examples: |
+    - .+
+
+
+- intent: songs1
+  examples: |
+    - recommend a [pop](song_type) music for me 
+    - recommend a [rock](song_type) music for me 
+    - recommend a [Hip-Hop & Rap](song_type) music for me 
+    - recommend a [country](song_type) music for me 
+    - recommend a [R&B](song_type) music for me  
+    - recommend a [Latin Music](song_type) music for me
+    - recommend a [Psychedelic Rock](song_type) music for me
+    - recommend a [Punk Rock](song_type) music for me
+
+
+- intent: songs2
+  examples: |
+    - recommend a song similar to [123](song_name)
+    - recommend a song similar to [1234567](song_name)
+    - recommend a song similar to [1234567890](song_name)
+
+    - recommend a song similar to [a](song_name)
+    - recommend a song similar to [oq](song_name)
+    - recommend a song similar to [saf](song_name)
+    - recommend a song similar to [eqg](song_name)
+    - recommend a song similar to [wqfs](song_name)
+    - recommend a song similar to [geqgrre](song_name)
+    - recommend a song similar to [hddfghdhdh](song_name)
+    - recommend a song similar to [gwegrerhyrthhyt](song_name)
+    - recommend a song similar to [hwtrehwefgdfsherhw](song_name)
+
+    - recommend a song similar to [One](song_name)
+    - recommend a song similar to [Creep](song_name)
+    - recommend a song similar to [Respect](song_name)
+    - recommend a song similar to [Hallelujah](song_name)
+    - recommend a song similar to [Yesterday](song_name)
+    - recommend a song similar to [Imagine](song_name)
+
+    - recommend a song similar to [plan b](song_name)
+    - recommend a song similar to [Sure ThingMiguel](song_name)
+    - recommend a song similar to [Hotel California](song_name)
+    - recommend a song similar to [In The Name Of The Father](song_name)
+    - recommend a song similar to [Love Before BC](song_name)
+    - recommend a song similar to [Smells Like Teen Spirit](song_name)
+    - recommend a song similar to [Billie Jean](song_name)
+    - recommend a song similar to [Bohemian Rhapsody](song_name)
+    - recommend a song similar to [Hey Jude](song_name)
+    - recommend a song similar to [Like A Rolling Stone](song_name)
+    - recommend a song similar to [I Can't Get No Satisfaction](song_name)
+    - recommend a song similar to [Best Of My Love](song_name)
+    - recommend a song similar to [River Deep Mountain High](song_name)
+    - recommend a song similar to [A Change Is Gonna Come](song_name)
+    - recommend a song similar to [When Doves Cry](song_name)
+    - recommend a song similar to [Dancing In The Street](song_name)
+    - recommend a song similar to [You've Lost That Lovin' Feeling](song_name)
+    - give me a song similar to [When Doves Cry](song_name)
+
+# working
+- intent: songs3
+  examples: |
+    - give me a song of [Jay Chou](singer_name)
+    - give me a song of [Ed Sheeran](singer_name)
+    - give me a song of [Billie Eilish](singer_name)
+    - give me a song of [Ariana Grande](singer_name)
+    - give me a song of [The Weeknd](singer_name)
+    - give me a song of [Taylor Swift](singer_name)
+    - give me a song of [Adele](singer_name)
+    - give me a song of [Justin Bieber](singer_name)
+    - give me a song of [Dua Lipa](singer_name)
+    - give me a song of [Beyonce](singer_name)
+    - give me a song of [Lady Gaga](singer_name)
+    - give me a song of [Bruno Mars](singer_name)
+    - give me a song of [Celine Dion](singer_name)
+    - give me a song of [Shawn Mendes](singer_name)
+    - give me a song of [Rihanna](singer_name)
+    - give me a song of [Charlie Puth](singer_name)
+
+- intent: songs4
+  examples: |
+    - give me songs from the album [Thriller](album_name)
+    - give me songs from the album [Back in Black](album_name)
+    - give me songs from the album [The Bodyguard](album_name)
+    - give me songs from the album [The Dark Side of the Moon](album_name)
+    - give me songs from the album [Hotel California](album_name)
+    - give me songs from the album [Come On Over](album_name)
+    - give me songs from the album [Led Zeppelin IV](album_name)
+    - give me songs from the album [Bad](album_name)
+    - give me songs from the album [Bat Out of Hell](album_name)
+    - give me songs from the album [Jagged Little Pill](album_name)
+    - give me songs from the album [Dirty Dancing](album_name)
+    - give me songs from the album [Falling into You](album_name)
+    - give me songs from the album [Ten](album_name)
+    - give me songs from the album [WOW](album_name)
+    - give me songs from the album [Ignore Grief](album_name)
+    - give me songs from the album [Red Moon in Venus](album_name)
+    - give me songs from the album [Song of Salvation](album_name)
+    - give me songs from the album [N Isai](album_name)
+    - give me songs from the album [Song of America](album_name)
+    - give me songs from the album [A Song for You](album_name)
+    - give me songs from the album [Go to School](album_name)
+    - give me songs from the album [GREY Area](album_name)
+    - give me songs from the album [Dominion](album_name)
+
+- intent: singers1
+  examples: |
+    - who sings [plan b](song_name)
+    - who sings [Sure ThingMiguel](song_name)
+    - who sings [One](song_name)
+    - who sings [Hotel California](song_name)
+    - who sings [In The Name Of The Father](song_name)
+    - who sings [Love Before BC](song_name)
+    - who sings [I Will Always Love You](song_name)
+    - who sings [Life On Mars](song_name)
+    - who sings [Be My Baby](song_name)
+    - who sings [Yesterday](song_name)
+    - who sings [Bridge Over Troubled Water](song_name)
+    - who sings [Papa's Got A Brand New Bag](song_name)
+    - who sings [My Generation](song_name)
+    - who sings [Best Of My Love](song_name)
+    - who sings [River Deep Mountain High](song_name)
+    - who sings [Dancing In The Street](song_name)
+    - who sings [When Doves Cry](song_name)
+    - who sings [Hallelujah](song_name)
+
+# working
+- intent: singers2
+  examples: |
+    - recommend a singer similar to [Jay Chou](singer_name)
+    - recommend a singer similar to [Ed Sheeran](singer_name)
+    - recommend a singer similar to [Billie Eilish](singer_name)
+    - recommend a singer similar to [Ariana Grande](singer_name)
+    - recommend a singer similar to [The Weeknd](singer_name)
+    - recommend a singer similar to [Taylor Swift](singer_name)
+    - recommend a singer similar to [Adele](singer_name)
+    - recommend a singer similar to [Justin Bieber](singer_name)
+    - recommend a singer similar to [Dua Lipa](singer_name)
+    - recommend a singer similar to [Beyonce](singer_name)
+    - recommend a singer similar to [Lady Gaga](singer_name)
+    - recommend a singer similar to [Bruno Mars](singer_name)
+    - recommend a singer similar to [Celine Dion](singer_name)
+    - recommend a singer similar to [Shawn Mendes](singer_name)
+    - recommend a singer similar to [Rihanna](singer_name)
+    - recommend a singer similar to [Charlie Puth](singer_name)
+    
+    - give me a singer similar to [Charlie Puth](singer_name)
+    - give me a singer similar to [Harry Styles](singer_name)
+    - give me a singer similar to [Miley Cyrus](singer_name)
+    - give me a singer similar to [Alicia Keys](singer_name)
+    - give me a singer similar to [Selena Gomez](singer_name)
+    - give me a singer similar to [Adam Levine](singer_name)
+
+- intent: singers3
+  examples: |
+    - who produces [Thriller](album_name)
+    - who produces [Back in Black](album_name)
+    - who produces [The Bodyguard](album_name)
+    - who produces [The Dark Side of the Moon](album_name)
+    - who produces [Hotel California](album_name)
+    - who produces [Come On Over](album_name)
+    - who produces [Rumours](album_name)
+    - who produces [Saturday Night Fever](album_name)
+
+
+- intent: albums1
+  examples: |  
+    - which album [One](song_name) belongs to?
+    - which album [Creep](song_name) belongs to?
+    - which album [Respect](song_name) belongs to?
+    - which album [Hallelujah](song_name) belongs to?
+    - which album [As It Was](song_name) belongs to?
+    - which album [London Calling](song_name) belongs to?
+    - which album [plan b](song_name) belongs to?
+    - which album [You've Lost That Lovin' Feeling](song_name) belongs to?
+    - which album [Dancing In The Street](song_name) belongs to?
+    - which album [Bohemian Rhapsody](song_name) belongs to?
+    - which album [Sure ThingMiguel](song_name) belongs to?
+    - which album [Smells Like Teen Spirit](song_name) belongs to?
+    - which album [Like A Rolling Stone](song_name) belongs to?
+
+# working
+- intent: albums2
+  examples: |  
+    - which album is produced by [Jay Chou](singer_name)
+    - give me some albums produced by [Jay Chou](singer_name)
+    - give me some albums produced by [Ariana Grande](singer_name)
+    - give me some albums produced by [Michael Jackson](singer_name)
+    - give me some albums produced by [Taylor Swift](singer_name)
+    - give me some albums produced by [Elvis Presley](singer_name)
+    - give me some albums produced by [Lady Gaga](singer_name)
+    - give me some albums produced by [Selena Gomez](singer_name)
+    - give me some albums produced by [Prince](singer_name)
+    - give me some albums produced by [Justin Bieber](singer_name)
+    - give me some albums produced by [Adele](singer_name)
+    - give me some albums produced by [Miley Cyrus](singer_name)
+    - give me some albums produced by [Madonna](singer_name)
+    - give me some albums produced by [Katy Perry](singer_name)
+    - give me some albums produced by [Elton Kohn](singer_name)
+    - give me some albums produced by [Janet Jackson](singer_name)
+    - give me some albums produced by [The Jackson 5](singer_name)
+    - give me some albums produced by [Mariah Carey](singer_name)
+    - give me some albums produced by [The Beach Boys](singer_name)
+    - give me some albums produced by [Whitney Houston](singer_name)
+    - give me some albums produced by [Christina Aguilera](singer_name)
+    - give me some albums produced by [Pink](singer_name)
+    - give me some albums produced by [Cher](singer_name)
+    - give me some albums produced by [Phil Collins](singer_name)
+    - give me some albums produced by [The Black Eyed Peas](singer_name)
+    - give me some albums produced by [Tina Turner](singer_name)
+
+
+- intent: music
+  examples: |
+    - what can you do?
+  
+- intent: songs
+  examples: |
+    - popular songs  
+    - give me a song
+
+- intent: singers
+  examples: |
+    - recommend a singer for me
+
+
+- intent: albums
+  examples: |
+    - recommend a popular album for me.
+
+
+
+# default
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

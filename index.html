@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Recommendation Chatbot</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      color: #333;
+      background-image: url('back.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    header {
+      background-color: #2c3e50;
+      color: #fff;
+      padding: 30px 0;
+    }
+    
+    header h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    section {
+      padding: 20px 0;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header class="text-center">
+    <h1>Music Recommendation Chatbot</h1>
+    <p>Discover and explore new music with our AI-powered chatbot!</p >
+  </header>
+
+  <section>
+    <div class="container">
+      <h2>About the Project</h2>
+      <p>
+        Our music recommendation chatbot is an AI-powered solution designed to help users find their next favorite song, album, or artist. By leveraging advanced natural language processing and machine learning algorithms, our chatbot is able to understand user preferences and provide personalized music recommendations based on their unique tastes and interests.
+      </p >
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Features</h2>
+      <ul>
+        <li>Personalized music recommendations based on user preferences</li>
+        <li>Discover new artists, albums, and genres</li>
+        <li>Get information about upcoming concerts and events</li>
+        <li>Seamless integration with popular music streaming platforms</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Try It Out</h2>
+      <p>try "recommend me songs of Adele"</p>
+      <p>try "give me singers similar to Adele"</p>
+      <p>try "recommend me some pop musics"</p>
+      <p>Give our music recommendation chatbot a try and find your next favorite song, album, or artist. \n Just click on the chat widget below and start chatting!</p >
+<div class="d-flex justify-content-center">
+<div id="webchat"></div>
+</div>
+</div>
+
+</section>
+
+<script>
+    !(function () {
+      let e = document.createElement("script"),
+        t = document.head || document.getElementsByTagName("head")[0];
+      (e.src = "https://cdn.jsdelivr.net/npm/rasa-webchat@1.x.x/lib/index.js"),
+        // Replace 1.x.x with the version that you want
+        (e.async = !0),
+        (e.onload = () => {
+          window.WebChat.default(
+            {
+              container: document.getElementById('webchat'),
+              customData: { language: "en"
+              },
+              socketUrl: "http://localhost:5005/",
+              // add other props here
+            },
+            null
+          );
+        }),
+        t.insertBefore(e, t.firstChild);
+    })();
+  </script>
+</body>
+</html>
